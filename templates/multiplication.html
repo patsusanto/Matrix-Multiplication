@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Multiplication
+{% endblock %}
+
+{% block main %}
+<form action="/multiplication" method="post">
+    <div class="user-input">
+        <div class="add-col" id="add-right"> 
+            <div class="right-col">
+                <h3>Matrix One</h3>
+            </div>
+            <div class="right-col">
+                <input class="form-control" type="number" placeholder="Row" id="row" name="row">
+            </div>
+            <div class="right-col">
+                <input class="form-control" type="number" placeholder="Column" id="col" name="col">
+            </div>
+        </div>
+        <div class="add-col" id="add-right"> 
+            <div class="right-col">
+                <h3>Matrix Two</h3>
+            </div>
+            <div class="right-col">
+                <input class="form-control" type="number" placeholder="Row" id="row1" name="row1">
+            </div>
+            <div class="right-col">
+                <input class="form-control" type="number" placeholder="Column" id="col1" name="col1">
+            </div>
+            <div class="right-col"> 
+                <input class="btn btn-primary" type="submit" value="submit">
+            </div>
+        </div>
+    </div>
+</form>
+
+
+{% endblock %}

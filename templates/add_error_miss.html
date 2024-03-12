@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Addition
+{% endblock %}
+
+{% block main %}
+    <form action="/addition" method="post">
+        <div class="user-input">
+            <div class="add-col" id="add-right"> 
+                <div class="right-col">
+                    <h3>Matrix Size</h3>
+                </div>
+                <div class="right-col">
+                    <input class="form-control" type="number" placeholder="Row" id="row" name="row">
+                </div>
+                <div class="right-col">
+                    <input class="form-control" type="number" placeholder="Column" id="col" name="col">
+                </div>
+                <div class="right-col"> 
+                    <input class="btn btn-primary" type="submit" value="submit">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="err-container">
+        <div class="center-col">
+            <p>Error: Please fill in all the inputs</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: righteous;
+    src: url(cronus.otf);
+}
+
+* {
+    font-family: arial;
+}
+
+.title {
+    text-align: center;
+    margin: 20px;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.elements {
+    width: 33%;
+    text-align: center;
+}
+
+
+#active {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.index-col {
+    width: 50%;
+    justify-content: center;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.matrix {
+    width: 25%;
+}
+
+.user-input {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-col {
+    text-align: center;
+    padding: 20px;
+}
+
+#add-right {
+    display: flex;
+    gap: 20px;
+}
+
+#operation-type {
+    text-align: center;
+}
+
+.added-col {
+    padding: 20px;
+    width: 33%;
+    
+    text-align: center;
+}
+
+#rightmost-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.err-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+}

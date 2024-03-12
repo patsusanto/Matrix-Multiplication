@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Matrix Input
+{% endblock%}
+
+{% block main %}
+    <form action="/addition" method="post">
+        <div class="user-input">
+            <div class="add-col" id="add-right"> 
+                <div class="right-col">
+                    <h3>Matrix Size</h3>
+                </div>
+                <div class="right-col">
+                    <input class="form-control" type="number" placeholder="Row" id="row" name="row">
+                </div>
+                <div class="right-col">
+                    <input class="form-control" type="number" placeholder="Column" id="col" name="col">
+                </div>
+                <div class="right-col"> 
+                    <input class="btn btn-primary" type="submit" value="submit">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <form action="/added" method="post">
+        <div class="container">
+            <div class="added-col">
+                <table class="table table-bordered">
+                    <tbody>
+                        {% for i in range(0, row) %}
+                            <tr>
+                                {% for j in range(0, col)%}
+                                    <td>{{ matrix1[i][j] }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="added-col">
+                {% if request.form.get("operation") == '+' %}
+                    <h2>+</h2>
+                {% else %}
+                    <h2>-</h2>
+                {% endif %}
+            </div>
+            <div class="added-col">
+                <table class="table table-bordered">
+                    <tbody>
+                        {% for i in range(0, row) %}
+                            <tr>
+                                {% for j in range(0, col)%}
+                                    <td>{{ matrix2[i][j] }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="added-col">
+                <h1>=</h1>
+            </div>
+            <div class="added-col">
+                <table class="table table-bordered">
+                    <tbody>
+                        {% for i in range(0, row) %}
+                            <tr>
+                                {% for j in range(0, col)%}
+                                    <td>{{ result[i][j] }}</td>
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+{% endblock %}
